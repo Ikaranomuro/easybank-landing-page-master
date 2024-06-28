@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 90rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+:root{
+    font-size: 62.5%; /*1rem = 10px*/
+    --darkBluePrimary:hsl(233, 26%, 24%);
+    --limeGreenPrimary:hsl(136, 65%, 51%);
+    --brightCyanPrimary:hsl(192, 70%, 51%);
+    --grayishBlueNeutral:hsl(233, 8%, 62%);
+    --lightGrayishBlueNeutral:hsl(220, 16%, 96%);
+    --veryLightGrayNeutral:hsl(0, 0%, 98%);
+    --whiteNeutral:hsl(0, 0%, 100%);
+
+    /*FONT*/
+    /*
+   .public-sans{
+   font-family: "Public Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: <weight>;
+   font-style: normal;
+}
+    */
+
+}
+
+.wrapper{
+    width: min(37.5rem,100%);
+    margin: auto;
+}
+
+/*========================NAVIGATION=======================*/
+#navigation{
+    width: 37.5rem;
+    position: relative;
+}
+
+#navigation .wrapper{
+    width: 37.5rem;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    background-color: var(--whiteNeutral);
+    padding: 2rem;
+    
+ 
+}
+
+#navigation .wrapper .logo{
+    height: 2rem;
+}
+
+#navigation .wrapper nav{
+    /* display: none; */
+    position: relative;
+    
+}
+
+.wrapper nav ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: -225px;
+    width: 34rem;
+    height: 23rem;
+    border-radius: 10px;
+    background-color: var(--whiteNeutral);
+    padding-block: 1.5rem;
+    margin-top: -300px;
+    transition: ease 1s;
+    z-index: 3;
+    
+}
+
+nav ol li{
+    font-size: 1.6rem;
+    list-style: none;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--darkBluePrimary);
+  
+  
+}
+
+.menuOpen{
+    transform: translateY(380px);
+}
+
+#navigation .wrapper button{
+    display: none;
+}
+
+#navigation .hamburguerOpen{
+    width: 3rem;
+    height: 2rem;
+    background-image: url('./images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#navigation .closeMenuIcon{
+    height: 3rem;
+    background-image: url('./images/icon-close.svg');
+
+}
+
+/*========================OVERFLOWMENUOPEN======================*/
+.overflowMenu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 97rem;
+    z-index: 2;
+    background-color:rgba(0, 0, 0, 0.151);
+}
+
+.overflowMenuOpen{
+    display: block;
+}
+
+
+/*========================HEADER======================*/
+.backgroundTopImage{
+    background-image: url(./images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    width: 37.5rem;
+}
+
+.imageOverlay{
+    z-index: 1;
+    position: absolute;
+    width: 37.5rem;
+    height: 45rem;
+    background-image: url(./images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
