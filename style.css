@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: 90rem;
     display: flex;
@@ -14,15 +14,16 @@ body{
 }
 
 
-:root{
-    font-size: 62.5%; /*1rem = 10px*/
-    --darkBluePrimary:hsl(233, 26%, 24%);
-    --limeGreenPrimary:hsl(136, 65%, 51%);
-    --brightCyanPrimary:hsl(192, 70%, 51%);
-    --grayishBlueNeutral:hsl(233, 8%, 62%);
-    --lightGrayishBlueNeutral:hsl(220, 16%, 96%);
-    --veryLightGrayNeutral:hsl(0, 0%, 98%);
-    --whiteNeutral:hsl(0, 0%, 100%);
+:root {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+    --darkBluePrimary: #2d314d;
+    --limeGreenPrimary: hsl(136, 65%, 51%);
+    --brightCyanPrimary: hsl(192, 70%, 51%);
+    --grayishBlueNeutral: hsl(233, 8%, 62%);
+    --lightGrayishBlueNeutral: hsl(220, 16%, 96%);
+    --veryLightGrayNeutral: hsl(0, 0%, 98%);
+    --whiteNeutral: hsl(0, 0%, 100%);
 
     /*FONT*/
     /*
@@ -36,18 +37,18 @@ body{
 
 }
 
-.wrapper{
-    width: min(37.5rem,100%);
+.wrapper {
+    width: min(37.5rem, 100%);
     margin: auto;
 }
 
 /*========================NAVIGATION=======================*/
-#navigation{
+#navigationRelative {
     width: 37.5rem;
     position: relative;
 }
 
-#navigation .wrapper{
+#navigationRelative .wrapper {
     width: 37.5rem;
     height: 7rem;
     display: flex;
@@ -56,21 +57,21 @@ body{
     z-index: 3;
     background-color: var(--whiteNeutral);
     padding: 2rem;
-    
- 
+
+
 }
 
-#navigation .wrapper .logo{
+#navigationRelative .wrapper .logo {
     height: 2rem;
 }
 
-#navigation .wrapper nav{
+#navigationRelative .wrapper nav {
     /* display: none; */
     position: relative;
-    
+
 }
 
-.wrapper nav ol{
+.wrapper nav ol {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -85,62 +86,71 @@ body{
     margin-top: -300px;
     transition: ease 1s;
     z-index: 3;
-    
+
 }
 
-nav ol li{
-    font-size: 1.6rem;
+nav ol li {
     list-style: none;
+}
+
+ol li a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--darkBluePrimary);
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color:var(--darkBluePrimary);
-  
-  
+
+
+
 }
 
-.menuOpen{
+
+.menuOpen {
     transform: translateY(380px);
 }
 
-#navigation .wrapper button{
+#navigationRelative .wrapper button {
     display: none;
 }
 
-#navigation .hamburguerOpen{
+#navigationRelative .hamburguerOpen {
     width: 3rem;
     height: 2rem;
     background-image: url('./images/icon-hamburger.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
+
 }
 
-#navigation .closeMenuIcon{
+#navigationRelative .closeMenuIcon {
     height: 3rem;
     background-image: url('./images/icon-close.svg');
+    cursor: pointer;
 
 }
 
 /*========================OVERFLOWMENUOPEN======================*/
-.overflowMenu{
+.overflowMenu {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 97rem;
+    height: 230rem;
     z-index: 2;
-    background-color:rgba(0, 0, 0, 0.151);
+    background-color: rgba(0, 0, 0, 0.151);
 }
 
-.overflowMenuOpen{
+.overflowMenuOpen {
     display: block;
 }
 
 
 /*========================HEADER======================*/
-.backgroundTopImage{
+.backgroundTopImage {
     background-image: url(./images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,7 +159,7 @@ nav ol li{
     width: 37.5rem;
 }
 
-.imageOverlay{
+.imageOverlay {
     z-index: 1;
     position: absolute;
     width: 37.5rem;
@@ -159,3 +169,248 @@ nav ol li{
     background-size: cover;
 }
 
+#header .wrapper .headerContent {
+    padding: 2rem;
+    text-align: center;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper .headerContent h1 {
+    font-weight: 400;
+    font-size: 3.6rem;
+    color: var(--darkBluePrimary);
+
+}
+
+.wrapper .headerContent p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+    color: var(--grayishBlueNeutral);
+}
+
+.wrapper .headerContent button {
+    color: var(--whiteNeutral);
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 2rem;
+    width: 16rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient(100deg, rgba(0, 255, 85, 0.637) 10%, rgb(23, 238, 148) 30%, rgb(36, 212, 212) 80%);
+    cursor: pointer;
+}
+
+/*========================MAIN======================*/
+#main {
+    width: 100%;
+    background-color: var(--lightGrayishBlueNeutral);
+
+}
+
+#main .wrapper {
+    padding-block: 2rem;
+}
+
+.wrapper .mainApresentation {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+.wrapper .mainApresentation h2 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: var(--darkBluePrimary);
+}
+
+.wrapper .mainApresentation p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+    color: var(--grayishBlueNeutral);
+}
+
+.mainContents {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 2rem;
+
+}
+
+.mainContents h3 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--darkBluePrimary);
+    margin-block: 2rem;
+}
+
+.mainContents p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-block: 2rem;
+    color: var(--grayishBlueNeutral);
+}
+
+/*========================ARTICLE======================*/
+#article {
+    width: 100%;
+    background-color: var(--veryLightGrayNeutral);
+
+}
+
+#article .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .articleApresentation h2 {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.2rem;
+    color: var(--darkBluePrimary);
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+
+.articleContents img {
+    display: block;
+    width: 33rem;
+    height: 22rem;
+    margin: auto;
+    border-radius: 1rem;
+
+}
+
+.articleContents div {
+    background-color: var(--whiteNeutral);
+    margin-top: 2rem;
+}
+
+.articleContents .articleChildsContents {
+    width: 33rem;
+    padding-inline: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.articleContents .articleChildsContents h6 {
+    text-align: start;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--grayishBlueNeutral);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+.articleContents .articleChildsContents a {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--darkBluePrimary);
+}
+
+.articleContents .articleChildsContents p {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    color: var(--grayishBlueNeutral);
+}
+
+/*========================FOOTER======================*/
+#footer {
+    width: 100%;
+    background-color: var(--darkBluePrimary);
+
+}
+
+.wrapper .footerContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContent .socialMediaContainer {
+    width: 33rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerContent div .footerLogo {
+    width: 15rem;
+    margin-block: 3rem;
+    margin-right: 1rem;
+}
+
+.socialMediaLinks a img {
+    width: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.footerContent ol li{
+    list-style: none;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--whiteNeutral);
+    margin-block: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.footerContent button {
+    color: var(--whiteNeutral);
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 2rem;
+    width: 16rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient(100deg, rgba(0, 255, 85, 0.637) 10%, rgb(23, 238, 148) 30%, rgb(36, 212, 212) 80%);
+    cursor: pointer;
+}
+
+.footerContent h6{
+    color: var(--grayishBlueNeutral);
+    font-size: 1.4rem;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
