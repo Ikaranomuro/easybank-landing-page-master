@@ -17,7 +17,7 @@ body {
 :root {
     font-size: 62.5%;
     /*1rem = 10px*/
-    --darkBluePrimary: #2d314d;
+    --darkBluePrimary: hsl(233, 26%, 24%);
     --limeGreenPrimary: hsl(136, 65%, 51%);
     --brightCyanPrimary: hsl(192, 70%, 51%);
     --grayishBlueNeutral: hsl(233, 8%, 62%);
@@ -44,19 +44,20 @@ body {
 
 /*========================NAVIGATION=======================*/
 #navigationRelative {
-    width: 37.5rem;
+    width: 144rem;
     position: relative;
 }
 
 #navigationRelative .wrapper {
-    width: 37.5rem;
+    width: 144rem;
     height: 7rem;
     display: flex;
     justify-content: space-between;
     position: fixed;
     z-index: 3;
     background-color: var(--whiteNeutral);
-    padding: 2rem;
+    padding-inline: 55rem;
+    padding-block: 2rem;
 
 
 }
@@ -89,11 +90,11 @@ body {
 
 }
 
-nav ol li {
+.navOl li {
     list-style: none;
 }
 
-ol li a {
+ .navOl li a {
     font-size: 1.6rem;
     text-decoration: none;
     color: var(--darkBluePrimary);
@@ -331,6 +332,10 @@ ol li a {
     color: var(--darkBluePrimary);
 }
 
+.articleContents .articleChildsContents a:hover{
+    color: var(--limeGreenPrimary);
+    }
+
 .articleContents .articleChildsContents p {
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
@@ -372,21 +377,40 @@ ol li a {
     margin-right: 1rem;
 }
 
-.socialMediaLinks a img {
+.socialMediaLinks a svg {
     width: 2.5rem;
     margin-right: 1.5rem;
 }
 
-.footerContent ol li{
-    list-style: none;
+svg:hover path {
+    Fill:#31d35c;
+}
+
+ .footerOl li{
+    list-style: none;   
+    margin-block: 2rem;
+    text-align: center;
+    
+}
+
+.footerOl li a{
+    text-decoration: none;
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     color: var(--whiteNeutral);
-    margin-block: 2rem;
-    text-align: center;
     font-size: 1.4rem;
+}
+
+.footerOl li a:hover{
+    color: var(--limeGreenPrimary);
+}
+
+.FooterRights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footerContent button {
@@ -413,4 +437,338 @@ ol li a {
     font-style: normal;
     margin-top: 2rem;
     margin-bottom: 5rem;
+}
+
+@media(min-width:1440px){
+    .wrapper {
+        width: min(144rem, 100%);
+        margin: auto;
+    }
+    
+/*========================NAVIGATION=======================*/
+#navigationRelative {
+    width: 190rem;
+    position: relative;   
+}
+
+#navigationRelative .wrapper {
+    width: 191rem;
+    height: 7rem;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding-inline: 25rem;
+
+
+}
+
+
+#navigationRelative .wrapper nav {
+    /* display: none; */
+    position: initial;
+
+}
+
+.wrapper nav ol {
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    left: initial;
+    width: initial;
+    height: initial;
+    border-radius: initial;
+    background-color: initial;
+    padding-block: initial;
+    margin-top: initial;
+    transition: initial;
+    z-index: initial;
+
+}
+
+
+ol li a { 
+    color: var(--grayishBlueNeutral); 
+    margin-left: 3rem;
+}
+
+.menuOpen {
+    transform: initial;
+}
+
+#navigationRelative .wrapper button {
+    display: block;
+    color: var(--whiteNeutral);
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    width: 18rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient(100deg, rgba(0, 255, 85, 0.637) 10%, rgb(23, 238, 148) 30%, rgb(36, 212, 212) 80%);
+    cursor: pointer;
+    margin-right:10rem;
+}
+
+#navigationRelative .hamburguerOpen {
+    width: initial;
+    height: initial;
+    background-repeat: initial;
+    background-size: initial;
+    cursor: initial;
+    display: none;
+
+}
+
+#navigationRelative .closeMenuIcon {
+    height: initial;
+    cursor: initial;
+    display: none;
+
+}
+
+/*========================HEADER======================*/
+#header .wrapper{
+    display: grid;
+    grid-template-areas: "A B";
+}
+
+.backgroundTopImage {
+    grid-area: B;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+    position: relative;
+    width: 92rem;
+    height: 90rem;
+    margin-top: -20rem;
+}
+
+.imageOverlay {
+    z-index: 1;
+    position: absolute;
+    width: 65rem;
+    height: 100rem;
+    margin-top: 15rem;
+    margin-left: 27rem;
+    background-image: url(./images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+#header .wrapper .headerContent {
+    text-align: start;
+    width: 50rem;
+    margin-right: 25rem;
+    grid-area: A;
+    padding: 2rem;
+    margin-top: 20rem;
+}
+
+.wrapper .headerContent h1 {
+    font-weight: 400;
+    font-size: 6rem;
+    color: var(--darkBluePrimary);
+
+}
+
+.wrapper .headerContent p {
+    font-size: 1.8rem;
+
+
+}
+
+.wrapper .headerContent button {
+    margin-top: 4rem;
+    width: 18rem;
+}
+
+/*========================MAIN======================*/
+#main {
+    width: 100%;
+    background-color: var(--lightGrayishBlueNeutral);
+
+}
+
+#main .wrapper {
+    width: min(144rem,100%);
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.wrapper .mainApresentation {
+    width: 70rem;
+    text-align: start;
+    padding: 0rem;
+    margin-top: 5em;
+}
+
+.wrapper .mainApresentation h2 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: var(--darkBluePrimary);
+}
+
+.wrapper .mainApresentation p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+    color: var(--grayishBlueNeutral);
+}
+
+.mainContents {
+    width: min(144rem,100%);
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    padding-left: 0;
+    margin-block: 5rem;
+
+}
+
+.mainContents div{
+    width: 33rem;
+    padding-right: 0rem;
+    
+   
+}
+
+.mainContents h3 {
+    font-size: 2.4rem; 
+}
+
+.mainContents p {
+    font-size: 1.8rem;
+}
+
+/*========================ARTICLE======================*/
+#article {
+    width: 100%;
+    padding-bottom: 10rem;
+}
+
+#article .wrapper {
+    width: min(144rem,100%);
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.wrapper .articleApresentation{
+    width: 100%;
+    padding-left: 2rem;
+
+}
+
+.wrapper .articleApresentation h2 {
+    font-size: 4.5rem;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    
+}
+
+.articleContents {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.articleContents img {
+   
+    width: 100%;
+    border-radius: 0.5rem;
+
+}
+
+.articleContents .articleChildsContents {
+    width: 30rem;
+}
+
+.articleContents .articleChildsContents h6 { 
+    font-size: 1.4rem;
+}
+
+.articleContents .articleChildsContents a {
+   
+    font-size: 1.9rem;
+}
+
+.articleContents .articleChildsContents p {
+    font-size: 1.6rem;
+
+}
+
+/*========================FOOTER======================*/
+#footer {
+    width: 100%;
+    background-color: var(--darkBluePrimary);
+    padding-block: 6rem;
+}
+
+.wrapper .footerContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.footerContent div .footerLogo {
+    width: 17rem;
+    margin-bottom: 6rem;
+    
+}
+
+.socialMediaLinks a svg {
+    margin-right: 1.5rem;
+}
+
+.footerContent .externalLinks{
+    width: 40rem;
+    text-align: start;
+    display: flex;
+    justify-content: start;
+    margin-right: 20rem;
+
+}
+
+.footerContent .footerOl{
+    width: 50rem;
+    margin-right: 5rem;
+}
+
+.footerContent .footerOl li{
+    width: 15rem;
+    text-align: start;
+    margin-block: 2.5rem;
+}
+
+
+.footerContent button {
+    color: var(--whiteNeutral);
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 2rem;
+    width: 16rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient(100deg, rgba(0, 255, 85, 0.637) 10%, rgb(23, 238, 148) 30%, rgb(36, 212, 212) 80%);
+    cursor: pointer;
+}
+
+.footerContent h6{
+    color: var(--grayishBlueNeutral);
+    font-size: 1.4rem;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
 }
